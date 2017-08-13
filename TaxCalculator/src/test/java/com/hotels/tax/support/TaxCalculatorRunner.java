@@ -1,4 +1,4 @@
-package com.hotels.tax;
+package com.hotels.tax.support;
 
 import com.hotels.tax.service.ITaxCalculator;
 import org.junit.Test;

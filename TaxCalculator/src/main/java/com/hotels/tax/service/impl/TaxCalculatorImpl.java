@@ -1,8 +1,8 @@
 package com.hotels.tax.service.impl;
 
+import com.hotels.tax.builder.ReceiptBuilder;
 import com.hotels.tax.model.IProduct;
 import com.hotels.tax.service.IDataService;
-import com.hotels.tax.service.IReceipt;
 import com.hotels.tax.service.ITaxCalculator;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,6 @@ import java.util.Map;
 @Service
 public class TaxCalculatorImpl implements ITaxCalculator {
 
-    @Inject IReceipt     receipt;
     @Inject IDataService dataService;
 
     public String getTaxCalculatedReceipt(Map<String, Integer> products) {
@@ -36,7 +35,7 @@ public class TaxCalculatorImpl implements ITaxCalculator {
 
         StringBuilder printReceipt = new StringBuilder("Nothing to print!!!");
         if(! productQuantityMap.isEmpty()){
-            printReceipt = receipt.print(productQuantityMap);
+            printReceipt = ReceiptBuilder.createReceiptBuilder(productQuantityMap).withItemTaxAndTotal().build();
         }
         printReceipt.append("\n###############################################################################");
         return printReceipt.toString();

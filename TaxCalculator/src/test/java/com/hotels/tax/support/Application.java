@@ -1,4 +1,4 @@
-package com.hotels.tax;
+package com.hotels.tax.support;
 
 import com.hotels.tax.service.IDataService;
 import com.hotels.tax.service.impl.DataServiceImpl;

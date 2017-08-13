@@ -1,4 +1,4 @@
-package com.hotels.tax;
+package com.hotels.tax.support;
 
 import org.mockito.MockitoAnnotations;
 

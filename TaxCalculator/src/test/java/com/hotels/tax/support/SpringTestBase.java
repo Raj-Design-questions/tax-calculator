@@ -1,8 +1,7 @@
-package com.hotels.tax;
+package com.hotels.tax.support;
 
 import com.hotels.tax.model.IProduct;
 import com.hotels.tax.model.impl.CompactDisc;
-import com.hotels.tax.model.impl.ComputerAccessory;
 import com.hotels.tax.model.impl.GeneralProduct;
 import com.hotels.tax.model.impl.MedicalProduct;
 import com.hotels.tax.service.IDataService;
